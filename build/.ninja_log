@@ -1,0 +1,10 @@
+# ninja log v5
+10	178	1783317982235950929	CMakeFiles/billiard_sim.dir/src/game.cpp.o	514c10f09938c8c4
+10	185	1783317982244215690	CMakeFiles/billiard_sim.dir/src/registry.cpp.o	e01dc91ffe9c834a
+1	11	0	/home/user/Documents/personalRepo/projects/physics engine/build/CMakeFiles/cmake.verify_globs	984f9e61fb72fdd5
+151	1991	1783313553997930743	CMakeFiles/billiard_sim.dir/src/glad.c.o	80fb376bb2f8d1ff
+11	133	1783318139591921278	CMakeFiles/billiard_sim.dir/src/systems/render.cpp.o	288d8f9fcfbc6132
+12	137	1783317272077125880	CMakeFiles/billiard_sim.dir/src/component_storage.cpp.o	7f0376fb96e44b7f
+46	353	1783315195398497401	CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o	c25d014ccf21875f
+11	76	1783325036638492261	build.ninja	c8fc13df496a956
+152	1964	1783313553968948115	CMakeFiles/billiard_sim.dir/src/components/sprite.cpp.o	7367fe99eed703be
