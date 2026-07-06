@@ -1,38 +1,27 @@
-#include "registry.h"
+#include "game.h"
 
-class Game
+Game::Game()
 {
-private:
-    bool running = true;
-    double t_last = 0.0f;
-    float t_accumulator = 0.0f;
-    float step = 0.01;
+    renderContext.init();
+}
 
-    Registry registry;
+Game::~Game()
+{
+}
 
-public:
-    Game()
+void Game::update(double time)
+{
+    while (running)
     {
-    }
-
-    ~Game()
-    {
-    }
-
-    void update(double time)
-    {
-        while (running)
+        float dt = time - t_last;
+        t_last += dt;
+        t_accumulator += dt;
+        while (t_accumulator > step)
         {
-            float dt = time - t_last;
-            t_last += dt;
-            t_accumulator += dt;
-            while (t_accumulator > step)
-            {
-                // systems
+            // systems
 
-                t_accumulator -= step;
-            }
-            // draw
+            t_accumulator -= step;
         }
+        // draw
     }
-};
+}

@@ -7,12 +7,6 @@
 },
 {
   "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
-  "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/components/sprite.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/components/sprite.cpp\"",
-  "file": "/home/user/Documents/personalRepo/projects/physics engine/src/components/sprite.cpp",
-  "output": "CMakeFiles/billiard_sim.dir/src/components/sprite.cpp.o"
-},
-{
-  "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
   "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/entity_manager.cpp\"",
   "file": "/home/user/Documents/personalRepo/projects/physics engine/src/entity_manager.cpp",
   "output": "CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o"
@@ -25,14 +19,44 @@
 },
 {
   "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
+  "command": "/usr/bin/gcc -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/glad.c.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/glad.c\"",
+  "file": "/home/user/Documents/personalRepo/projects/physics engine/src/glad.c",
+  "output": "CMakeFiles/billiard_sim.dir/src/glad.c.o"
+},
+{
+  "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
+  "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/program.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/program.cpp\"",
+  "file": "/home/user/Documents/personalRepo/projects/physics engine/src/program.cpp",
+  "output": "CMakeFiles/billiard_sim.dir/src/program.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
   "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/registry.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/registry.cpp\"",
   "file": "/home/user/Documents/personalRepo/projects/physics engine/src/registry.cpp",
   "output": "CMakeFiles/billiard_sim.dir/src/registry.cpp.o"
 },
 {
   "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
+  "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/stb_image.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/stb_image.cpp\"",
+  "file": "/home/user/Documents/personalRepo/projects/physics engine/src/stb_image.cpp",
+  "output": "CMakeFiles/billiard_sim.dir/src/stb_image.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
   "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/systems/render.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/systems/render.cpp\"",
   "file": "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render.cpp",
   "output": "CMakeFiles/billiard_sim.dir/src/systems/render.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
+  "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_context.cpp\"",
+  "file": "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_context.cpp",
+  "output": "CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/personalRepo/projects/physics engine/build",
+  "command": "/usr/bin/g++ -I/home/user/glfw/include -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm\" -I\"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb\" -I/usr/include/freetype2 -g -o CMakeFiles/billiard_sim.dir/src/systems/render_system.cpp.o -c \"/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_system.cpp\"",
+  "file": "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_system.cpp",
+  "output": "CMakeFiles/billiard_sim.dir/src/systems/render_system.cpp.o"
 }
 ]

@@ -23,14 +23,6 @@ void Registry::destroy_entity(Entity entity)
     entity_manager.destroy(entity);
 }
 
-template <typename T>
-ComponentStorage<T> &Registry::get_storage()
-{
-    // example:
-    // if constexpr (std::is_same_v<T, Position>)
-    //     return positions;
-}
-
 // Forward the component to the correct sparse set storage
 template <typename T>
 void Registry::assign(Entity entity, T component)

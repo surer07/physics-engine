@@ -3,14 +3,27 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SOURCE_FILES at CMakeLists.txt:20 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/user/Documents/personalRepo/projects/physics engine/src/*.c")
+set(OLD_GLOB
+  "/home/user/Documents/personalRepo/projects/physics engine/src/glad.c"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/home/user/Documents/personalRepo/projects/physics engine/build/CMakeFiles/cmake.verify_globs")
+endif()
+
+# SOURCE_FILES at CMakeLists.txt:20 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/user/Documents/personalRepo/projects/physics engine/src/*.cpp")
 set(OLD_GLOB
   "/home/user/Documents/personalRepo/projects/physics engine/src/component_storage.cpp"
-  "/home/user/Documents/personalRepo/projects/physics engine/src/components/sprite.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/entity_manager.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/game.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/program.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/registry.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/stb_image.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_context.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_system.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -21,7 +34,10 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/user/Documents/personalRepo/projects/physics engine/src/*.h")
 set(OLD_GLOB
   "/home/user/Documents/personalRepo/projects/physics engine/src/component_storage.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/components/sprite.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/components/transform.h"
   "/home/user/Documents/personalRepo/projects/physics engine/src/entity_manager.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/game.h"
   "/home/user/Documents/personalRepo/projects/physics engine/src/registry.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
