@@ -10,13 +10,15 @@
 struct RenderContext
 {
     uint32_t quad_vao;
+    uint32_t camera_ubo; // Added: UBO handle to store the projection conversion matrix
 
     // Asset handles
     uint32_t default_shader;
     uint32_t outline_shader;
     uint32_t player_texture;
 
-    void init()
+    // Modified: Pass the window dimensions to handle the top-left pixel to NDC math on startup
+    void init(int screen_width, int screen_height)
     {
         // 1. Initialize the shared Quad VAO
         quad_vao = create_quad_vao();
@@ -27,9 +29,49 @@ struct RenderContext
 
         // 3. Load textures
         player_texture = load_texture("assets/player.png");
+
+        // 4. Create and upload orthographic projection matrix to the UBO
+        setup_camera_ubo(screen_width, screen_height);
     }
 
 private:
+    void setup_camera_ubo(int width, int height)
+    {
+        // Calculate the 4x4 matrix mapping top-left (0,0) to bottom-right (width, height)
+        // Hand-coded standard orthographic matrix calculation to keep code dependency-free (no GLM required here)
+        float lr = 1.0f / (float)width;
+        float tb = 1.0f / (0.0f - (float)height); // Flips Y-axis so 0 is top
+
+        float ortho_matrix[16] = {
+            2.0f * lr, 0.0f, 0.0f, 0.0f,
+            0.0f, 2.0f * tb, 0.0f, 0.0f,
+            0.0f, 0.0f, -1.0f, 0.0f,
+            -1.0f, 1.0f, 0.0f, 1.0f};
+
+        // Create the Uniform Buffer Object
+        glGenBuffers(1, &camera_ubo);
+        glBindBuffer(GL_UNIFORM_BUFFER, camera_ubo);
+        glBufferData(GL_UNIFORM_BUFFER, sizeof(ortho_matrix), ortho_matrix, GL_STATIC_DRAW);
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
+        // Define a shared binding point index (e.g., binding slot 0)
+        uint32_t binding_point = 0;
+        glBindBufferBase(GL_UNIFORM_BUFFER, binding_point, camera_ubo);
+
+        // Bind the "CameraData" uniform block in both compiled shaders to block index slot 0
+        uint32_t default_block_idx = glGetUniformBlockIndex(default_shader, "CameraData");
+        if (default_block_idx != GL_INVALID_INDEX)
+        {
+            glUniformBlockBinding(default_shader, default_block_idx, binding_point);
+        }
+
+        uint32_t outline_block_idx = glGetUniformBlockIndex(outline_shader, "CameraData");
+        if (outline_block_idx != GL_INVALID_INDEX)
+        {
+            glUniformBlockBinding(outline_shader, outline_block_idx, binding_point);
+        }
+    }
+
     uint32_t create_quad_vao()
     {
         // 1x1 Quad centered at (0,0): Positions (X, Y), Texture Coordinates (U, V)
@@ -60,8 +102,6 @@ private:
         glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float)));
 
         glBindVertexArray(0);
-        // Note: We don't delete the VBO here because the VAO tracks it while bound,
-        // but you can safely unbind the VBO right after if preferred.
         return vao;
     }
 
@@ -115,7 +155,6 @@ private:
                       << info_log << std::endl;
         }
 
-        // Clean up raw shader stages
         glDeleteShader(vertex);
         glDeleteShader(fragment);
 
@@ -128,14 +167,13 @@ private:
         glGenTextures(1, &texture_id);
         glBindTexture(GL_TEXTURE_2D, texture_id);
 
-        // Texture wrapping/filtering profiles
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST); // Clear pixel art scaling
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
         int width, height, channels;
-        stbi_set_flip_vertically_on_load(true); // Flip texture coordinate system to match OpenGL's origin
+        stbi_set_flip_vertically_on_load(true);
         unsigned char *data = stbi_load(path, &width, &height, &channels, 0);
 
         if (data)
@@ -154,7 +192,6 @@ private:
         return texture_id;
     }
 
-    // Helper function to read shader source code from text file
     std::string read_file(const char *path)
     {
         std::ifstream file(path);

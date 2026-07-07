@@ -1,7 +1,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
-#include "game.h" // Assuming Game class is defined here
+#include "game.h"
 
 // Array tracking state of every key (true if pressed)
 bool keys[1024] = {false};
@@ -65,17 +65,37 @@ int main()
     // 4. Instantiate and Initialize Game
     Game game;
 
-    // Timing variables
-    float delta_time = 0.0f;
-    float last_frame = 0.0f;
+    double t_last = glfwGetTime(); // Fix: Initialize properly with current time
+    float t_accumulator = 0.0f;
+    float step = 0.01f; // 100 FPS fixed physics updates
 
-    // 5. Main Game Loop
     while (!glfwWindowShouldClose(window))
     {
+        // A. MUST poll OS events at the beginning of the frame
         glfwPollEvents();
 
-        game.update(static_cast<float>(glfwGetTime()));
+        double t_current = glfwGetTime();
+        float dt = static_cast<float>(t_current - t_last);
+        t_last = t_current;
 
+        // Cap dt to prevent "spiral of death" if the game lags heavily
+        if (dt > 0.25f)
+            dt = 0.25f;
+
+        t_accumulator += dt;
+
+        while (t_accumulator >= step)
+        {
+            // B. Pass input state to your ECS game instance right before systems update
+            game.process_input(keys);
+
+            // Run your physics and movement systems with a fixed dt
+            game.update(step);
+            t_accumulator -= step;
+        }
+
+        // C. Render and swap buffers exactly ONCE per frame (outside the fixed update loop)
+        glClear(GL_COLOR_BUFFER_BIT); // Clear screen before drawing next frame
         glfwSwapBuffers(window);
     }
 

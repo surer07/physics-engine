@@ -21,7 +21,6 @@ set(OLD_GLOB
   "/home/user/Documents/personalRepo/projects/physics engine/src/program.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/registry.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/stb_image.cpp"
-  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_context.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_system.cpp"
   )
