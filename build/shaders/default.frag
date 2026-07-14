@@ -1,17 +1,12 @@
 #version 330 core
-out vec4 FragColor;
-
 in vec2 TexCoord;
 
-uniform sampler2D imageTexture; // Set up automatically by default slot GL_TEXTURE0
+uniform sampler2D texture1;
+uniform vec4 color;  // Make sure this exists
 
-void main() {
-    vec4 texColor = texture(imageTexture, TexCoord);
-    
-    // Transparent clipping discard optimization for 2D sprites
-    if(texColor.a < 0.1) {
-        discard;
-    }
-    
-    FragColor = texColor;
+out vec4 FragColor;
+
+void main()
+{
+    FragColor = texture(texture1, TexCoord) * color;
 }

@@ -49,13 +49,6 @@ cmake_ninja_workdir = /home/user/Documents/personalRepo/projects/physics$ engine
 
 build cmake_object_order_depends_target_billiard_sim: phony || CMakeFiles/billiard_sim.dir
 
-build CMakeFiles/billiard_sim.dir/src/component_storage.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/component_storage.cpp || cmake_object_order_depends_target_billiard_sim
-  DEP_FILE = CMakeFiles/billiard_sim.dir/src/component_storage.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/user/glfw/include -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb" -I/usr/include/freetype2
-  OBJECT_DIR = CMakeFiles/billiard_sim.dir
-  OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src
-
 build CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/entity_manager.cpp || cmake_object_order_depends_target_billiard_sim
   DEP_FILE = CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o.d
   FLAGS = -g
@@ -98,6 +91,48 @@ build CMakeFiles/billiard_sim.dir/src/stb_image.cpp.o: CXX_COMPILER__billiard_si
   OBJECT_DIR = CMakeFiles/billiard_sim.dir
   OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src
 
+build CMakeFiles/billiard_sim.dir/src/systems/broad_phase.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/systems/broad_phase.cpp || cmake_object_order_depends_target_billiard_sim
+  DEP_FILE = CMakeFiles/billiard_sim.dir/src/systems/broad_phase.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/user/glfw/include -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb" -I/usr/include/freetype2
+  OBJECT_DIR = CMakeFiles/billiard_sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src/systems
+
+build CMakeFiles/billiard_sim.dir/src/systems/collision_detection.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/systems/collision_detection.cpp || cmake_object_order_depends_target_billiard_sim
+  DEP_FILE = CMakeFiles/billiard_sim.dir/src/systems/collision_detection.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/user/glfw/include -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb" -I/usr/include/freetype2
+  OBJECT_DIR = CMakeFiles/billiard_sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src/systems
+
+build CMakeFiles/billiard_sim.dir/src/systems/debug_render.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/systems/debug_render.cpp || cmake_object_order_depends_target_billiard_sim
+  DEP_FILE = CMakeFiles/billiard_sim.dir/src/systems/debug_render.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/user/glfw/include -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb" -I/usr/include/freetype2
+  OBJECT_DIR = CMakeFiles/billiard_sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src/systems
+
+build CMakeFiles/billiard_sim.dir/src/systems/elastic_system.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/systems/elastic_system.cpp || cmake_object_order_depends_target_billiard_sim
+  DEP_FILE = CMakeFiles/billiard_sim.dir/src/systems/elastic_system.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/user/glfw/include -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb" -I/usr/include/freetype2
+  OBJECT_DIR = CMakeFiles/billiard_sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src/systems
+
+build CMakeFiles/billiard_sim.dir/src/systems/movement_system.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/systems/movement_system.cpp || cmake_object_order_depends_target_billiard_sim
+  DEP_FILE = CMakeFiles/billiard_sim.dir/src/systems/movement_system.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/user/glfw/include -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb" -I/usr/include/freetype2
+  OBJECT_DIR = CMakeFiles/billiard_sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src/systems
+
+build CMakeFiles/billiard_sim.dir/src/systems/physics_system.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/systems/physics_system.cpp || cmake_object_order_depends_target_billiard_sim
+  DEP_FILE = CMakeFiles/billiard_sim.dir/src/systems/physics_system.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/user/glfw/include -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/glm" -I"/home/user/Documents/personalRepo/projects/physics engine/dependencies/stb" -I/usr/include/freetype2
+  OBJECT_DIR = CMakeFiles/billiard_sim.dir
+  OBJECT_FILE_DIR = CMakeFiles/billiard_sim.dir/src/systems
+
 build CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o: CXX_COMPILER__billiard_sim_unscanned_Debug /home/user/Documents/personalRepo/projects/physics$ engine/src/systems/render_context.cpp || cmake_object_order_depends_target_billiard_sim
   DEP_FILE = CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o.d
   FLAGS = -g
@@ -120,7 +155,7 @@ build CMakeFiles/billiard_sim.dir/src/systems/render_system.cpp.o: CXX_COMPILER_
 #############################################
 # Link the executable billiard_sim
 
-build billiard_sim: CXX_EXECUTABLE_LINKER__billiard_sim_Debug CMakeFiles/billiard_sim.dir/src/component_storage.cpp.o CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o CMakeFiles/billiard_sim.dir/src/game.cpp.o CMakeFiles/billiard_sim.dir/src/glad.c.o CMakeFiles/billiard_sim.dir/src/program.cpp.o CMakeFiles/billiard_sim.dir/src/registry.cpp.o CMakeFiles/billiard_sim.dir/src/stb_image.cpp.o CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o CMakeFiles/billiard_sim.dir/src/systems/render_system.cpp.o | /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/local/lib/libglfw3.a
+build billiard_sim: CXX_EXECUTABLE_LINKER__billiard_sim_Debug CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o CMakeFiles/billiard_sim.dir/src/game.cpp.o CMakeFiles/billiard_sim.dir/src/glad.c.o CMakeFiles/billiard_sim.dir/src/program.cpp.o CMakeFiles/billiard_sim.dir/src/registry.cpp.o CMakeFiles/billiard_sim.dir/src/stb_image.cpp.o CMakeFiles/billiard_sim.dir/src/systems/broad_phase.cpp.o CMakeFiles/billiard_sim.dir/src/systems/collision_detection.cpp.o CMakeFiles/billiard_sim.dir/src/systems/debug_render.cpp.o CMakeFiles/billiard_sim.dir/src/systems/elastic_system.cpp.o CMakeFiles/billiard_sim.dir/src/systems/movement_system.cpp.o CMakeFiles/billiard_sim.dir/src/systems/physics_system.cpp.o CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o CMakeFiles/billiard_sim.dir/src/systems/render_system.cpp.o | /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/local/lib/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libfreetype.so  /usr/local/lib/libglfw3.a
   OBJECT_DIR = CMakeFiles/billiard_sim.dir

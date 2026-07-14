@@ -15,12 +15,17 @@ endif()
 # SOURCE_FILES at CMakeLists.txt:20 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/user/Documents/personalRepo/projects/physics engine/src/*.cpp")
 set(OLD_GLOB
-  "/home/user/Documents/personalRepo/projects/physics engine/src/component_storage.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/entity_manager.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/game.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/program.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/registry.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/stb_image.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/broad_phase.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/collision_detection.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/debug_render.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/elastic_system.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/movement_system.cpp"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/physics_system.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_context.cpp"
   "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_system.cpp"
   )
@@ -33,11 +38,25 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/user/Documents/personalRepo/projects/physics engine/src/*.h")
 set(OLD_GLOB
   "/home/user/Documents/personalRepo/projects/physics engine/src/component_storage.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/components/colision_circle.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/components/colision_rect.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/components/input.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/components/math_utils.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/components/physics.h"
   "/home/user/Documents/personalRepo/projects/physics engine/src/components/sprite.h"
   "/home/user/Documents/personalRepo/projects/physics engine/src/components/transform.h"
   "/home/user/Documents/personalRepo/projects/physics engine/src/entity_manager.h"
   "/home/user/Documents/personalRepo/projects/physics engine/src/game.h"
   "/home/user/Documents/personalRepo/projects/physics engine/src/registry.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/broad_phase.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/collision_detection.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/collision_math.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/debug_render.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/elastic_system.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/movement_system.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/physics_system.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_context.h"
+  "/home/user/Documents/personalRepo/projects/physics engine/src/systems/render_system.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

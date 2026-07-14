@@ -1,14 +1,21 @@
 # ninja log v5
-22	1112	1783328127303187131	CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o	46fd66ac83b2f3b5
-259	1019	1783331229951747111	CMakeFiles/billiard_sim.dir/src/program.cpp.o	b2b458bc6d8584ce
-13	2312	1783330978711701415	CMakeFiles/billiard_sim.dir/src/game.cpp.o	514c10f09938c8c4
-13	2312	1783330978685180317	CMakeFiles/billiard_sim.dir/src/registry.cpp.o	e01dc91ffe9c834a
-98	258	0	/home/user/Documents/personalRepo/projects/physics engine/build/CMakeFiles/cmake.verify_globs	984f9e61fb72fdd5
-42	269	1783328220924909353	CMakeFiles/billiard_sim.dir/src/glad.c.o	80fb376bb2f8d1ff
+12	1269	1783992032884314271	CMakeFiles/billiard_sim.dir/src/systems/collision_detection.cpp.o	92039c914778c073
 14	2241	1783330978681441005	CMakeFiles/billiard_sim.dir/src/systems/render.cpp.o	288d8f9fcfbc6132
-14	2312	1783330978699849597	CMakeFiles/billiard_sim.dir/src/systems/render_system.cpp.o	27f84141f5371f94
+33	311	1783938955986626374	CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o	c25d014ccf21875f
+42	269	1783328220924909353	CMakeFiles/billiard_sim.dir/src/glad.c.o	80fb376bb2f8d1ff
 12	137	1783317272077125880	CMakeFiles/billiard_sim.dir/src/component_storage.cpp.o	7f0376fb96e44b7f
-46	353	1783315195398497401	CMakeFiles/billiard_sim.dir/src/entity_manager.cpp.o	c25d014ccf21875f
-9	81	1783390640311621106	build.ninja	c8fc13df496a956
-152	1964	1783313553968948115	CMakeFiles/billiard_sim.dir/src/components/sprite.cpp.o	7367fe99eed703be
+12	1269	1783992032761004900	CMakeFiles/billiard_sim.dir/src/systems/debug_render.cpp.o	a5ff66e36a3be614
+100	848	1783992251818070492	CMakeFiles/billiard_sim.dir/src/systems/render_system.cpp.o	27f84141f5371f94
+1	10	0	/home/user/Documents/personalRepo/projects/physics engine/build/CMakeFiles/cmake.verify_globs	984f9e61fb72fdd5
+1267	2153	1783992033863771458	CMakeFiles/billiard_sim.dir/src/systems/physics_system.cpp.o	949ccdcceddf0895
+11	1350	1783992033058309356	CMakeFiles/billiard_sim.dir/src/program.cpp.o	b2b458bc6d8584ce
 9	638	1783328332651081396	CMakeFiles/billiard_sim.dir/src/stb_image.cpp.o	a311d49270bcc677
+11	1596	1783992033305062801	CMakeFiles/billiard_sim.dir/src/systems/broad_phase.cpp.o	1135468592fb373e
+152	1964	1783313553968948115	CMakeFiles/billiard_sim.dir/src/components/sprite.cpp.o	7367fe99eed703be
+10	1668	1783992033377759791	CMakeFiles/billiard_sim.dir/src/game.cpp.o	514c10f09938c8c4
+848	949	1783992251917708212	billiard_sim	11eb9d39f7a23ec3
+62	365	1783992479942763453	build.ninja	c8fc13df496a956
+12	1620	1783992033329354017	CMakeFiles/billiard_sim.dir/src/systems/elastic_system.cpp.o	8a77bd4e01f9181c
+13	951	1783992032659381346	CMakeFiles/billiard_sim.dir/src/systems/movement_system.cpp.o	c9060aa3bb329342
+1269	2198	1783992033908051530	CMakeFiles/billiard_sim.dir/src/systems/render_context.cpp.o	46fd66ac83b2f3b5
+11	1313	1783992033019264235	CMakeFiles/billiard_sim.dir/src/registry.cpp.o	e01dc91ffe9c834a
